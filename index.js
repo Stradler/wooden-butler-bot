@@ -3,7 +3,7 @@ const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 var http = require("http");
 setInterval(function() {
-  http.get("http://intense-ravine-75760.herokuapp.com");
+  http.get("https://intense-ravine-75760.herokuapp.com/");
   console.log("omegalul");
 }, 300000);
 bot.onText(/\/motto/, (msg) => {

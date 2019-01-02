@@ -1,7 +1,10 @@
 const TelegramBot = require("node-telegram-bot-api");
 const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
-
+var http = require("http");
+setInterval(function() {
+  http.get("http://intense-ravine-75760.herokuapp.com");
+}, 300000);
 bot.onText(/\/motto/, (msg) => {
   bot.sendMessage(msg.chat.id, "Вуд Дивижн Эстетичней Парижа");
 });

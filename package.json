@@ -1,13 +1,14 @@
 {
-  "name": "bot-telegram",
+  "name": "wooden-butler-bot",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "skololaviron <skolola@vironit.ru>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
     "firebase": "^5.7.2",
-    "node-telegram-bot-api": "^0.30.0",
-    "open-graph-scraper": "^3.6.0"
+    "http": "^0.0.0",
+    "node-telegram-bot-api": "^0.30.0"
   },
   "scripts": {
     "start": "node index.js"

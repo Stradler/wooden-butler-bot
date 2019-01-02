@@ -1,10 +1,8 @@
 const TelegramBot = require("node-telegram-bot-api");
 const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
-var http = require("http");
 setInterval(function() {
-  http.get("https://intense-ravine-75760.herokuapp.com/");
-  console.log("omegalul");
+  axios.get("https://intense-ravine-75760.herokuapp.com/");
 }, 300000);
 bot.onText(/\/motto/, (msg) => {
   bot.sendMessage(msg.chat.id, "Вуд Дивижн Эстетичней Парижа");
@@ -37,7 +35,3 @@ bot.on("message", (msg) => {
     bot.sendMessage(msg.chat.id, "Have a nice day " + msg.from.first_name);
   }
 });
-
-module.exports = (req, res) => {
-  res.end(`Hi!`);
-};

@@ -2,10 +2,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 const express = require("express");
-<<<<<<< HEAD
 const axios = require("axios");
-=======
->>>>>>> 05bb3153648deb64b42d44b5be3ae23c942ca4fe
 const app = express();
 setInterval(function() {
   axios.get("https://intense-ravine-75760.herokuapp.com/");
@@ -44,8 +41,4 @@ bot.on("message", (msg) => {
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("listening");
-<<<<<<< HEAD
 });
-=======
-})
->>>>>>> 05bb3153648deb64b42d44b5be3ae23c942ca4fe

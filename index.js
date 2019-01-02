@@ -1,7 +1,7 @@
 const TelegramBot = require("node-telegram-bot-api");
 const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
-const express = require("express")l
+const express = require("express");
 const app = express();
 setInterval(function() {
   axios.get("https://intense-ravine-75760.herokuapp.com/");
